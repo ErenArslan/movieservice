@@ -1,0 +1,13 @@
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\bin\Debug\netcoreapp3.1\MovieProviderService.exe
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\bin\Debug\netcoreapp3.1\MovieProviderService.deps.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\bin\Debug\netcoreapp3.1\MovieProviderService.runtimeconfig.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\bin\Debug\netcoreapp3.1\MovieProviderService.runtimeconfig.dev.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\bin\Debug\netcoreapp3.1\MovieProviderService.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\bin\Debug\netcoreapp3.1\MovieProviderService.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\obj\Debug\netcoreapp3.1\MovieProviderService.csprojAssemblyReference.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\obj\Debug\netcoreapp3.1\MovieProviderService.csproj.CoreCompileInputs.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\obj\Debug\netcoreapp3.1\MovieProviderService.AssemblyInfoInputs.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\obj\Debug\netcoreapp3.1\MovieProviderService.AssemblyInfo.cs
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\obj\Debug\netcoreapp3.1\MovieProviderService.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\obj\Debug\netcoreapp3.1\MovieProviderService.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService\obj\Debug\netcoreapp3.1\MovieProviderService.genruntimeconfig.cache

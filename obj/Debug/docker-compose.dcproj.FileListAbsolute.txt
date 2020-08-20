@@ -1,0 +1,9 @@
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\appsettings.Development.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\appsettings.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Properties\launchSettings.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\MovieService.Api.exe
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\MovieService.Api.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\MovieService.Api.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\obj\Debug\docker-compose.dcproj.CopyComplete

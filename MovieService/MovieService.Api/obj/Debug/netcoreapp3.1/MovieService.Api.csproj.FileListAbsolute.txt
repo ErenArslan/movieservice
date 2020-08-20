@@ -8,3 +8,13 @@ C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\ob
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\MovieService.Api.RazorTargetAssemblyInfo.cache
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\staticwebassets\MovieService.Api.StaticWebAssets.Manifest.cache
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\staticwebassets\MovieService.Api.StaticWebAssets.xml
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\MovieService.Api.deps.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\MovieService.Api.runtimeconfig.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\MovieService.Api.runtimeconfig.dev.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\MovieService.Api.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\MovieService.Api.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\MovieService.Api.csproj.CoreCompileInputs.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\MovieService.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\MovieService.Api.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\MovieService.Api.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\MovieService.Api.genruntimeconfig.cache

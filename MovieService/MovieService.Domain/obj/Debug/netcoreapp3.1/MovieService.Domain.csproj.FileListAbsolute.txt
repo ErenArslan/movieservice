@@ -1,0 +1,9 @@
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Domain\bin\Debug\netcoreapp3.1\MovieService.Domain.deps.json
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Domain\bin\Debug\netcoreapp3.1\MovieService.Domain.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Domain\obj\Debug\netcoreapp3.1\MovieService.Domain.csprojAssemblyReference.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Domain\obj\Debug\netcoreapp3.1\MovieService.Domain.AssemblyInfoInputs.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Domain\obj\Debug\netcoreapp3.1\MovieService.Domain.AssemblyInfo.cs
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Domain\obj\Debug\netcoreapp3.1\MovieService.Domain.csproj.CoreCompileInputs.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Domain\bin\Debug\netcoreapp3.1\MovieService.Domain.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Domain\obj\Debug\netcoreapp3.1\MovieService.Domain.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Domain\obj\Debug\netcoreapp3.1\MovieService.Domain.pdb
