@@ -10,6 +10,19 @@
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {}
         }
+      },
+      "MovieService.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "MediatR": "8.1.0"
+        },
+        "compile": {
+          "bin/placeholder/MovieService.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MovieService.Domain.dll": {}
+        }
       }
     }
   },
@@ -31,11 +44,17 @@
         "mediatr.8.1.0.nupkg.sha512",
         "mediatr.nuspec"
       ]
+    },
+    "MovieService.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MovieService.Domain/MovieService.Domain.csproj",
+      "msbuildProject": "../MovieService.Domain/MovieService.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "MediatR >= 8.1.0"
+      "MediatR >= 8.1.0",
+      "MovieService.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -63,7 +82,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\SingleLanguage\\source\\repos\\AtrosMovie\\MovieService\\MovieService.Domain\\MovieService.Domain.csproj": {
+              "projectPath": "C:\\Users\\SingleLanguage\\source\\repos\\AtrosMovie\\MovieService\\MovieService.Domain\\MovieService.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

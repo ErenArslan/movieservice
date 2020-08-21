@@ -1,4 +1,5 @@
-﻿using MovieService.Domain.SeedWork;
+﻿using MovieService.Domain.Events;
+using MovieService.Domain.SeedWork;
 using System;
 using System.Diagnostics.CodeAnalysis;
 
@@ -21,7 +22,7 @@ namespace MovieService.Domain.AggregatesModels.User
             Username = Check.NotNullOrWhiteSpace(value: username, nameof(username));
             Email= Check.NotNullOrWhiteSpace(value: email, nameof(email));
             Password = Check.NotNullOrWhiteSpace(value: password, nameof(password));
-
+            AddDomainEvent(new UserCreatedDomainEvent(this));
         }
 
 
