@@ -1,10 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "yFwSuf0RdafTeeORBwd/EoIumlW/yb7MlXQLdGcDb4wN89KhJ4yrtV5TjSRMXkgpXiTue8eLG9ZfDaN+3EaX7A==",
+  "dgSpecHash": "pDzPqIcbUkdXAfHjHG7jSPtFt9kWyRwjon4Kjkl0U2o466OB+eVR4HBXfNpKKpUWnY+y0i3AZQ4BT8BineT4RQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\SingleLanguage\\source\\repos\\AtrosMovie\\MovieService\\MovieService.Application\\MovieService.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\SingleLanguage\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512"
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\dotnetcore.cap\\3.1.0\\dotnetcore.cap.3.1.0.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.7\\microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.7\\microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.7\\microsoft.extensions.fileproviders.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\3.1.7\\microsoft.extensions.hosting.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.7\\microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.options\\3.1.7\\microsoft.extensions.options.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }

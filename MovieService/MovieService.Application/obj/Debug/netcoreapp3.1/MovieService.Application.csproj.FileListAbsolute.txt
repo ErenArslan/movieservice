@@ -6,3 +6,6 @@ C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Applic
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Application\obj\Debug\netcoreapp3.1\MovieService.Application.AssemblyInfo.cs
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Application\obj\Debug\netcoreapp3.1\MovieService.Application.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Application\obj\Debug\netcoreapp3.1\MovieService.Application.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Application\bin\Debug\netcoreapp3.1\MovieService.Domain.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Application\bin\Debug\netcoreapp3.1\MovieService.Domain.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Application\obj\Debug\netcoreapp3.1\MovieService.Application.csproj.CopyComplete

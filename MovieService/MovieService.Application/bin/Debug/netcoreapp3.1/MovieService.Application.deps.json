@@ -7,14 +7,46 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "MovieService.Application/1.0.0": {
+        "dependencies": {
+          "MediatR": "8.1.0",
+          "MovieService.Domain": "1.0.0"
+        },
         "runtime": {
           "MovieService.Application.dll": {}
+        }
+      },
+      "MediatR/8.1.0": {
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.0.0"
+          }
+        }
+      },
+      "MovieService.Domain/1.0.0": {
+        "dependencies": {
+          "MediatR": "8.1.0"
+        },
+        "runtime": {
+          "MovieService.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "MovieService.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MediatR/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KJFnA0MV83bNOhvYbjIX1iDykhwFXoQu0KV7E1SVbNA/CmO2I7SAm2Baly0eS7VJ2GwlmStLajBfeiNgTpvYzQ==",
+      "path": "mediatr/8.1.0",
+      "hashPath": "mediatr.8.1.0.nupkg.sha512"
+    },
+    "MovieService.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
