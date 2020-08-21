@@ -7,5 +7,6 @@ namespace MovieService.Application.Dtos.Requests
     {
         public int Rating { get; set; }
         public string Note { get; set; }
+        public int MovieId { get; set; }
     }
 }

@@ -6,5 +6,6 @@ namespace MovieService.Application.Dtos.Requests
     public class RecommendMovieRequest : IRequest<BaseResponse<bool>>
     {
         public string Email { get; set; }
+        public int MovieId { get; set; }
     }
 }

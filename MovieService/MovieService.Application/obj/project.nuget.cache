@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pDzPqIcbUkdXAfHjHG7jSPtFt9kWyRwjon4Kjkl0U2o466OB+eVR4HBXfNpKKpUWnY+y0i3AZQ4BT8BineT4RQ==",
+  "dgSpecHash": "Wv1dd+wqbdSgwoZSgngvVjVBENaJwqVecyDwsFvufqOKZIPbcvQSlwF9vGR3qrQ4sYn9+X3kgTxhuH6h5AsDIQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\SingleLanguage\\source\\repos\\AtrosMovie\\MovieService\\MovieService.Application\\MovieService.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\dotnetcore.cap\\3.1.0\\dotnetcore.cap.3.1.0.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\fluentvalidation\\9.1.3\\fluentvalidation.9.1.3.nupkg.sha512",
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.7\\microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.7\\microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
