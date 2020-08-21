@@ -1,11 +1,15 @@
 version: '3.4'
 
 services:
+
+
   movieservice.api:
     image: ${DOCKER_REGISTRY-}movieserviceapi
     build:
       context: .
       dockerfile: MovieService/MovieService.Api/Dockerfile
+    ports:
+     - "8000:80"
 
   mongodb-movieservice:
     image: mongo:latest

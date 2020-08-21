@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MovieService.Application.IntegrationEvents.Handlers
 {
-    class MovieRecommendedIntegrationEventHandler : ICapSubscribe
+   public class MovieRecommendedIntegrationEventHandler : ICapSubscribe
     {
 
 
