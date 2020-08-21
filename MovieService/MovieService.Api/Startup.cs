@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using IdentityServer4.AccessTokenValidation;
+using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using MovieService.Application.UseCases;
 
 namespace MovieService.Api
 {
@@ -36,6 +30,12 @@ namespace MovieService.Api
                 options.Authority = $"{Configuration["Auth0:Domain"]}";
                 options.Audience = Configuration["Auth0:Audience"];
             });
+
+
+            services.AddMediatR(typeof(GetMovieRequestHandler));
+
+
+
 
             services.AddControllers();
         }
