@@ -65,3 +65,17 @@ C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\SharpCompress.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Pipelines.Sockets.Unofficial.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\System.Diagnostics.PerformanceCounter.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\MovieService.Infrastructure.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Sinks.Elasticsearch.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Extensions.Hosting.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Extensions.Logging.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Enrichers.Environment.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Sinks.Debug.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Sinks.Console.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Settings.Configuration.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Microsoft.Extensions.DependencyModel.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Sinks.PeriodicBatching.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Formatting.Elasticsearch.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Sinks.File.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
