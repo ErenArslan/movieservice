@@ -2,8 +2,11 @@ C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infras
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\bin\Debug\netcoreapp3.1\MovieService.Infrastructure.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\bin\Debug\netcoreapp3.1\MovieService.Infrastructure.pdb
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\obj\Debug\netcoreapp3.1\MovieService.Infrastructure.csprojAssemblyReference.cache
-C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\obj\Debug\netcoreapp3.1\MovieService.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\obj\Debug\netcoreapp3.1\MovieService.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\obj\Debug\netcoreapp3.1\MovieService.Infrastructure.AssemblyInfo.cs
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\obj\Debug\netcoreapp3.1\MovieService.Infrastructure.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\obj\Debug\netcoreapp3.1\MovieService.Infrastructure.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\bin\Debug\netcoreapp3.1\MovieService.Domain.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\bin\Debug\netcoreapp3.1\MovieService.Domain.pdb
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\obj\Debug\netcoreapp3.1\MovieService.Infrastructure.csproj.CopyComplete
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Infrastructure\obj\Debug\netcoreapp3.1\MovieService.Infrastructure.csproj.CoreCompileInputs.cache

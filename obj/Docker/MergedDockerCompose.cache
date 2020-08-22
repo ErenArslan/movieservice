@@ -1,4 +1,12 @@
 services:
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    ports:
+    - published: 27017
+      target: 27017
+    volumes:
+    - mongodb-data:/data/db:rw
   movieservice.api:
     build:
       context: C:\Users\SingleLanguage\source\repos\AtrosMovie
@@ -8,9 +16,26 @@ services:
       ASPNETCORE_URLS: https://+:443;http://+:80
     image: movieserviceapi
     ports:
+    - published: 8000
+      target: 80
     - target: 80
     - target: 443
     volumes:
     - C:\Users\SingleLanguage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\SingleLanguage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:latest
+    ports:
+    - published: 15672
+      target: 15672
+  redisdb:
+    container_name: redisdb
+    image: redis:alpine
+    ports:
+    - published: 6379
+      target: 6379
 version: '3.4'
+volumes:
+  mongodb-data:
+    external: false

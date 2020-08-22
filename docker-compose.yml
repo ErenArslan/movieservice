@@ -11,32 +11,27 @@ services:
     ports:
      - "8000:80"
 
-  mongodb-movieservice:
+  mongodb:
     image: mongo:latest
-    container_name: mongodb-movieservice
+    container_name: mongodb
     ports:
       - 27017:27017 
     volumes:
-     - mongodb-movieservice:/data/db
+     - mongodb-data:/data/db
 
   rabbitmq:
-     image: rabbitmq:latest
+     image: rabbitmq:3-management
      container_name: rabbitmq
-     volumes:
-            - mongodb-movieservice:/var/lib/rabbitmq/mnesia 
      ports:
             - 15672:15672
 
-  redis-movieservice:
+  redisdb:
     image: "redis:alpine"
-    container_name: redis-movieservice
+    container_name: redisdb
     ports:
      - "6379:6379"
-    volumes:
-     - ./data/redis-data:/var/lib/redis
+   
 
 volumes:
-  mongodb-movieservice:
-    external: false
-  rabbitmq-movieservice:
+  mongodb-data:
     external: false

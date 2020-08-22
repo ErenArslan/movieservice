@@ -9,14 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.Elasticsearch" Version="3.1.1" />
+    <PackageReference Include="AspNetCore.HealthChecks.MongoDb" Version="3.1.2" />
+    <PackageReference Include="AspNetCore.HealthChecks.Rabbitmq" Version="3.1.4" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="3.1.1" />
+    <PackageReference Include="DotNetCore.CAP.MongoDB" Version="3.1.0" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="3.1.0" />
     <PackageReference Include="MediatR" Version="8.1.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.Redis" Version="3.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MovieService.Application\MovieService.Application.csproj" />
+    <ProjectReference Include="..\MovieService.Infrastructure\MovieService.Infrastructure.csproj" />
   </ItemGroup>
 
 

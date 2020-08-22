@@ -1,4 +1,12 @@
 services:
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    ports:
+    - published: 27017
+      target: 27017
+    volumes:
+    - mongodb-data:/data/db:rw
   movieservice.api:
     build:
       context: C:\Users\SingleLanguage\source\repos\AtrosMovie
@@ -23,6 +31,8 @@ services:
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
     ports:
+    - published: 8000
+      target: 80
     - target: 80
     - target: 443
     tty: true
@@ -33,4 +43,19 @@ services:
     - C:\Users\SingleLanguage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
     - C:\Users\SingleLanguage\.nuget\packages:/root/.nuget/packages:ro
     - C:\Users\SingleLanguage\source\repos\AtrosMovie:/src:rw
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:latest
+    ports:
+    - published: 15672
+      target: 15672
+  redisdb:
+    container_name: redisdb
+    image: redis:alpine
+    ports:
+    - published: 6379
+      target: 6379
 version: '3.4'
+volumes:
+  mongodb-data:
+    external: false

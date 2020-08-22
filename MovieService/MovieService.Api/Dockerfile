@@ -8,6 +8,9 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["MovieService/MovieService.Api/MovieService.Api.csproj", "MovieService/MovieService.Api/"]
+COPY ["MovieService/MovieService.Application/MovieService.Application.csproj", "MovieService/MovieService.Application/"]
+COPY ["MovieService/MovieService.Domain/MovieService.Domain.csproj", "MovieService/MovieService.Domain/"]
+COPY ["MovieService/MovieService.Infrastructure/MovieService.Infrastructure.csproj", "MovieService/MovieService.Infrastructure/"]
 RUN dotnet restore "MovieService/MovieService.Api/MovieService.Api.csproj"
 COPY . .
 WORKDIR "/src/MovieService/MovieService.Api"
