@@ -57,8 +57,9 @@ namespace MovieService.Application.UseCases
             catch (Exception ex)
             {
                 response.Errors.Add(ex.Message);
-                _logger.LogError("not found");
-               
+                _logger.LogError("--- Getting Movie Error", "Movie Id:" + request.Id);
+
+
             }
             return response;
         }

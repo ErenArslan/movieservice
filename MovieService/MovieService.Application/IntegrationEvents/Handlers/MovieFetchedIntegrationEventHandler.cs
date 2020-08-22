@@ -22,16 +22,10 @@ namespace MovieService.Application.IntegrationEvents.Handlers
         [CapSubscribe(nameof(MovieFetchedIntegrationEvent))]
         public async Task Handle(MovieFetchedIntegrationEvent @event)
         {
-            try
-            {
-                var addMovieRequest = @event.Adapt<AddMovieRequest>();
-                await _mediator.Send(addMovieRequest);
-            }
-            catch (Exception)
-            {
+            var request = @event.Adapt<AddMovieRequest>();
 
-                _logger.LogError("");
-            }
+            await _mediator.Send(request);
+
         }
     }
 }

@@ -43,7 +43,8 @@ namespace MovieService.Application.UseCases
             catch (Exception ex)
             {
                 response.Errors.Add(ex.Message);
-                _logger.LogError("");
+                _logger.LogError("--- Adding Review Error", "User Id:" + request.UserId);
+
 
             }
             return response;
