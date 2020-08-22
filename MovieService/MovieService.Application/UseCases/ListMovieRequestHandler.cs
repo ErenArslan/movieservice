@@ -33,7 +33,7 @@ namespace MovieService.Application.UseCases
             catch (Exception ex)
             {
                 response.Errors.Add(ex.Message);
-                _logger.LogError("--- Listing Movie Error", "Movie Id:" + request.Id);
+                _logger.LogError("--- Listing Movie Error");
 
             }
             return response;

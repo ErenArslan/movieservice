@@ -1,7 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MovieService.Api.Services;
 using MovieService.Application.Dtos.Requests;
+using System;
 using System.Threading.Tasks;
 
 namespace MovieService.Api.Controllers
@@ -12,10 +14,11 @@ namespace MovieService.Api.Controllers
     public class MovieController : ControllerBase
     {
         private readonly IMediator _mediator;
-
-        public MovieController(IMediator mediator)
+        private readonly IIdentityService _identityService;
+        public MovieController(IMediator mediator, IIdentityService identityService)
         {
             _mediator = mediator;
+            _identityService = identityService;
         }
 
         [HttpGet("GetMovie/{id}")]
@@ -28,11 +31,11 @@ namespace MovieService.Api.Controllers
 
             if (!response.HasError)
             {
-                return Ok(response.Data);
+                return Ok(response);
             }
             else
             {
-                return BadRequest(response.Errors);
+                return BadRequest(response);
             }
         }
 
@@ -56,7 +59,10 @@ namespace MovieService.Api.Controllers
         [HttpPost("AddReview")]
         public async Task<IActionResult> AddReview([FromBody]AddReviewRequest request)
         {
-
+            // If user logged in get id from token.
+            //  var userId = _identityService.GetUserIdentity();
+            var userId = Guid.NewGuid();
+            request.UserId = userId;
             var response = await _mediator.Send(request);
 
             if (!response.HasError)

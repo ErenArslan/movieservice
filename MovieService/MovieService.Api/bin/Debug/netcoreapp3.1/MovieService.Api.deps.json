@@ -31,6 +31,7 @@
           "AspNetCore.HealthChecks.UI.Client": "3.1.1",
           "DotNetCore.CAP.MongoDB": "3.1.0",
           "DotNetCore.CAP.RabbitMQ": "3.1.0",
+          "FluentValidation.AspNetCore": "9.1.3",
           "MediatR": "8.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.7",
@@ -492,6 +493,36 @@
         },
         "compile": {
           "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidation.AspNetCore/9.1.3": {
+        "dependencies": {
+          "FluentValidation": "9.1.3",
+          "FluentValidation.DependencyInjectionExtensions": "9.1.3"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.1.3.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll": {}
+        }
+      },
+      "FluentValidation.DependencyInjectionExtensions/9.1.3": {
+        "dependencies": {
+          "FluentValidation": "9.1.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.1.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
       "Mapster/6.5.0": {
@@ -3965,6 +3996,20 @@
       "sha512": "sha512-3YctqJSe80I+lQqdhW3WKni6l3vHMzne1KK93lb/GN0BkEy7x3QNnVh+9qFkvDPn806L+8skpI0+dhj/w0BDuA==",
       "path": "fluentvalidation/9.1.3",
       "hashPath": "fluentvalidation.9.1.3.nupkg.sha512"
+    },
+    "FluentValidation.AspNetCore/9.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I4k3nrvyAyhreYVqzvMZDPh5mzUh1dZmg3iksm3e3wxSuyf/OuR5v+87Qo5Gs5vyRh4CErcU4lfzUDq81EoDGw==",
+      "path": "fluentvalidation.aspnetcore/9.1.3",
+      "hashPath": "fluentvalidation.aspnetcore.9.1.3.nupkg.sha512"
+    },
+    "FluentValidation.DependencyInjectionExtensions/9.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TldPfc0PeKqPgDhKn3+c2Ib6AUTnfXlL11tHHTEgSkUE6+t5AxCLf/CBjtaOOliztyBdwqjlgKFiMh7OgeCaFw==",
+      "path": "fluentvalidation.dependencyinjectionextensions/9.1.3",
+      "hashPath": "fluentvalidation.dependencyinjectionextensions.9.1.3.nupkg.sha512"
     },
     "Mapster/6.5.0": {
       "type": "package",

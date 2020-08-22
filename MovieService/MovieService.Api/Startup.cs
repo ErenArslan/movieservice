@@ -6,12 +6,15 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using MovieService.Api.Filters;
+using MovieService.Api.Services;
 using MovieService.Application.Dtos.Requests;
 using MovieService.Application.UseCases;
 using MovieService.Application.Validations;
@@ -89,7 +92,8 @@ namespace MovieService.Api
 
             services.AddMediatR(typeof(GetMovieRequestHandler));
 
-
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<IIdentityService, IdentityService>();
             services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddTransient<IGuidGenerator, GuidGenerator>();
 
@@ -128,6 +132,15 @@ namespace MovieService.Api
                 options.SuppressModelStateInvalidFilter = true;
             });
 
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Atros Movie Service",
+                    Version = "v1",
+                    Description = "Movie Service HTTP API. This is a Data-Driven/CRUD microservice "
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -137,7 +150,12 @@ namespace MovieService.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
 
+            app.UseSwaggerUI(p =>
+            {
+                p.SwaggerEndpoint("v1/swagger.json", "Swagger Test");
+            });
             app.UseRouting();
             app.UseAuthentication();
 

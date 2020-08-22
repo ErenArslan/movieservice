@@ -116,6 +116,10 @@
             "Serilog.Sinks.Elasticsearch": {
               "target": "Package",
               "version": "[8.2.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.5.1, )"
             }
           },
           "imports": [

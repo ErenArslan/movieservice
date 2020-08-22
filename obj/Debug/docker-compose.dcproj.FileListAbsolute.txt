@@ -79,3 +79,5 @@ C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Sinks.Periodic
 C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Formatting.Elasticsearch.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Serilog.Sinks.File.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\FluentValidation.AspNetCore.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\bin\Debug\FluentValidation.DependencyInjectionExtensions.dll

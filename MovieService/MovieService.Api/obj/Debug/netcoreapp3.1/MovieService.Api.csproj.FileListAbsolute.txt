@@ -101,3 +101,8 @@ C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bi
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
 C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\MovieService.Api.csproj.CoreCompileInputs.cache
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\MovieService.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieService\MovieService.Api\obj\Debug\netcoreapp3.1\MovieService.Api.MvcApplicationPartsAssemblyInfo.cache
