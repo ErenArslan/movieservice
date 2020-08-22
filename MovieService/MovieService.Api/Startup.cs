@@ -1,14 +1,17 @@
 using FluentValidation;
+using FluentValidation.AspNetCore;
 using HealthChecks.UI.Client;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
+using MovieService.Api.Filters;
 using MovieService.Application.Dtos.Requests;
 using MovieService.Application.UseCases;
 using MovieService.Application.Validations;
@@ -112,7 +115,19 @@ namespace MovieService.Api
             });
 
 
-            services.AddControllers();
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(new ValidateModelStateFilter());
+
+            }).AddFluentValidation(options =>
+            {
+                options.RegisterValidatorsFromAssemblyContaining<Startup>();
+            });
+
+            services.Configure<ApiBehaviorOptions>(options => {
+                options.SuppressModelStateInvalidFilter = true;
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
