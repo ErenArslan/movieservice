@@ -14,9 +14,9 @@ namespace MovieService.Application.UseCases
     public  class ListMovieRequestHandler : IRequestHandler<ListMoviesRequest, BaseResponse<List<MovieDto>>>
     {
         private readonly IMovieRepository _movieRepository;
-        private readonly ILogger<GetMovieRequestHandler> _logger;
+        private readonly ILogger<ListMovieRequestHandler> _logger;
 
-        public ListMovieRequestHandler(IMovieRepository movieRepository, ILogger<GetMovieRequestHandler> logger)
+        public ListMovieRequestHandler(IMovieRepository movieRepository, ILogger<ListMovieRequestHandler> logger)
         {
             _movieRepository = movieRepository;
             _logger = logger;

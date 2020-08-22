@@ -13,9 +13,9 @@ namespace MovieService.Application.UseCases
     public  class AddReviewRequestHandler : IRequestHandler<AddReviewRequest, BaseResponse<bool>>
     {
         private readonly IMovieRepository _movieRepository;
-        private readonly ILogger<GetMovieRequestHandler> _logger;
+        private readonly ILogger<AddReviewRequestHandler> _logger;
         private readonly IGuidGenerator _guidGenerator;
-        public AddReviewRequestHandler(IMovieRepository movieRepository, ILogger<GetMovieRequestHandler> logger, IGuidGenerator guidGenerator)
+        public AddReviewRequestHandler(IMovieRepository movieRepository, ILogger<AddReviewRequestHandler> logger, IGuidGenerator guidGenerator)
         {
             _movieRepository = movieRepository;
             _logger = logger;
