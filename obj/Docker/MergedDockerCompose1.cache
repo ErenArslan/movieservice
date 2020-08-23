@@ -1,4 +1,28 @@
 services:
+  elasticsearch:
+    cap_add:
+    - IPC_LOCK
+    container_name: elasticsearch
+    environment:
+      ES_JAVA_OPTS: -Xms128m -Xmx128m
+      bootstrap.memory_lock: "true"
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.7.0
+    ports:
+    - published: 9200
+      target: 9200
+    - published: 9300
+      target: 9300
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
+      nofile:
+        hard: 65536
+        soft: 65536
+    volumes:
+    - elasticsearch-data:/usr/share/elasticsearch/data:rw
   mongodb:
     container_name: mongodb
     image: mongo:latest
@@ -7,6 +31,38 @@ services:
       target: 27017
     volumes:
     - mongodb-data:/data/db:rw
+  movieproviderservice:
+    build:
+      context: C:\Users\SingleLanguage\source\repos\AtrosMovie
+      dockerfile: MovieProviderService/MovieProviderService/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: MovieProviderService
+      target: base
+    container_name: MovieProviderService
+    depends_on:
+    - elasticsearch
+    - mongodb
+    - rabbitmq
+    - redisdb
+    entrypoint: tail -f /dev/null
+    environment:
+      NUGET_FALLBACK_PACKAGES: ''
+    image: movieproviderservice:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/MovieProviderService.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 8005
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\SingleLanguage\source\repos\AtrosMovie\MovieProviderService\MovieProviderService:/app:rw
+    - C:\Users\SingleLanguage\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\SingleLanguage\.nuget\packages:/root/.nuget/packages:ro
   movieservice.api:
     build:
       context: C:\Users\SingleLanguage\source\repos\AtrosMovie
@@ -16,6 +72,11 @@ services:
         com.microsoft.visual-studio.project-name: MovieService.Api
       target: base
     container_name: MovieService.Api
+    depends_on:
+    - elasticsearch
+    - mongodb
+    - rabbitmq
+    - redisdb
     entrypoint: tail -f /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -43,6 +104,40 @@ services:
     - C:\Users\SingleLanguage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
     - C:\Users\SingleLanguage\.nuget\packages:/root/.nuget/packages:ro
     - C:\Users\SingleLanguage\source\repos\AtrosMovie:/src:rw
+  notificationserviceapi:
+    build:
+      context: C:\Users\SingleLanguage\source\repos\AtrosMovie
+      dockerfile: NotificationService/NotificationService.Api/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: NotificationService.Api
+      target: base
+    container_name: NotificationService.Api
+    depends_on:
+    - rabbitmq
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: notificationserviceapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/netcoreapp3.1/NotificationService.Api.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 8008
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\SingleLanguage\source\repos\AtrosMovie\NotificationService\NotificationService.Api:/app:rw
+    - C:\Users\SingleLanguage\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\SingleLanguage\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\SingleLanguage\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\SingleLanguage\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\SingleLanguage\source\repos\AtrosMovie:/src:rw
   rabbitmq:
     container_name: rabbitmq
     image: rabbitmq:latest
@@ -57,5 +152,7 @@ services:
       target: 6379
 version: '3.4'
 volumes:
+  elasticsearch-data:
+    external: false
   mongodb-data:
     external: false

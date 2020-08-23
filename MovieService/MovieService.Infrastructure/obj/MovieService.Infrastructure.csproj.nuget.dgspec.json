@@ -41,6 +41,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[8.1.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [
@@ -100,9 +104,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "JsonNet.PrivateSettersContractResolvers": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[8.1.0, )"
+            },
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.7, )"
             },
             "Microsoft.Extensions.Options": {
               "target": "Package",
@@ -111,6 +123,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.11.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
           "imports": [

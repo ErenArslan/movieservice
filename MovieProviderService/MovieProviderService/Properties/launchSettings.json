@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MovieProviderService": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

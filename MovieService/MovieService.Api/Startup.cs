@@ -13,9 +13,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using MongoDB.Bson.Serialization;
 using MovieService.Api.Filters;
 using MovieService.Api.Services;
 using MovieService.Application.Dtos.Requests;
+using MovieService.Application.IntegrationEvents.Handlers;
 using MovieService.Application.UseCases;
 using MovieService.Application.Validations;
 using MovieService.Domain.AggregatesModels.Movie;
@@ -65,7 +67,7 @@ namespace MovieService.Api
             hcBuilder
               .AddCheck("RabbitMQ-self", () => HealthCheckResult.Healthy())
               .AddRabbitMQ(
-                 Configuration.GetSection("RabbitMq:Host").Value,
+                "amqp://guest:guest@"+Configuration.GetSection("RabbitMq:Host").Value,
                   name: "RabbitMQ-check",
                   tags: new string[] { "RabbitMQ" });
 
@@ -83,6 +85,10 @@ namespace MovieService.Api
                     = Configuration.GetSection("MongoConnection:ConnectionString").Value;
                 options.Database
                     = Configuration.GetSection("MongoConnection:Database").Value;
+            });
+            BsonClassMap.RegisterClassMap<Movie>(cm => {
+                cm.AutoMap();
+                cm.MapField("_reviews").SetElementName("Reviews");
             });
 
             services.AddDistributedRedisCache(option =>
@@ -113,11 +119,14 @@ namespace MovieService.Api
                     option.HostName = Configuration.GetSection("RabbitMq:Host").Value;
                     option.UserName = Configuration.GetSection("RabbitMq:Username").Value;
                     option.Password = Configuration.GetSection("RabbitMq:Password").Value;
+           
+                    option.VirtualHost = Configuration.GetSection("RabbitMq:VirtualHost").Value;
                 });
 
                 x.FailedRetryCount = int.Parse(Configuration.GetSection("RabbitMq:RetryCount").Value);
             });
 
+            services.AddTransient<MovieFetchedIntegrationEventHandler>();
 
             services.AddMvc(options =>
             {

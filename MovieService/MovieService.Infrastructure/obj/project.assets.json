@@ -11,6 +11,18 @@
           "lib/netstandard2.1/DnsClient.dll": {}
         }
       },
+      "JsonNet.PrivateSettersContractResolvers/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/JsonNet.PrivateSettersContractResolvers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/JsonNet.PrivateSettersContractResolvers.dll": {}
+        }
+      },
       "MediatR/8.1.0": {
         "type": "package",
         "compile": {
@@ -18,6 +30,18 @@
         },
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/3.1.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.1.7"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.7": {
@@ -205,6 +229,15 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -1354,7 +1387,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "MediatR": "8.1.0"
+          "MediatR": "8.1.0",
+          "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
           "bin/placeholder/MovieService.Domain.dll": {}
@@ -1388,6 +1422,19 @@
         "lib/netstandard2.1/DnsClient.xml"
       ]
     },
+    "JsonNet.PrivateSettersContractResolvers/1.0.0": {
+      "sha512": "B9KNPVez9v/qWHxNjCMcMVMcstQMM/KLrXop9NPa9tzrU9hSasPNFaSETofo5GrLKQ1NHzDHcHR9Be4FPcfeNg==",
+      "type": "package",
+      "path": "jsonnet.privatesetterscontractresolvers/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsonnet.privatesetterscontractresolvers.1.0.0.nupkg.sha512",
+        "jsonnet.privatesetterscontractresolvers.nuspec",
+        "lib/netstandard1.3/JsonNet.PrivateSettersContractResolvers.dll",
+        "lib/netstandard2.0/JsonNet.PrivateSettersContractResolvers.dll"
+      ]
+    },
     "MediatR/8.1.0": {
       "sha512": "KJFnA0MV83bNOhvYbjIX1iDykhwFXoQu0KV7E1SVbNA/CmO2I7SAm2Baly0eS7VJ2GwlmStLajBfeiNgTpvYzQ==",
       "type": "package",
@@ -1404,6 +1451,22 @@
         "lib/netstandard2.1/MediatR.xml",
         "mediatr.8.1.0.nupkg.sha512",
         "mediatr.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Abstractions/3.1.7": {
+      "sha512": "Uj/0fmq7FWi7B7RfLkn2UJE1SThJ60mOlChx9P5nRjP/EbeYNm+LoyiOr6yPhDsArwHttKyun18TXXJ2C9EE/g==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.abstractions/3.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "microsoft.extensions.caching.abstractions.3.1.7.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.nuspec"
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.7": {
@@ -1623,6 +1686,37 @@
         "dotnet_library_license.txt",
         "netstandard.library.1.6.1.nupkg.sha512",
         "netstandard.library.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -4906,10 +5000,13 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "JsonNet.PrivateSettersContractResolvers >= 1.0.0",
       "MediatR >= 8.1.0",
+      "Microsoft.Extensions.Caching.Abstractions >= 3.1.7",
       "Microsoft.Extensions.Options >= 3.1.7",
       "MongoDB.Driver >= 2.11.0",
-      "MovieService.Domain >= 1.0.0"
+      "MovieService.Domain >= 1.0.0",
+      "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
@@ -4953,9 +5050,17 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "JsonNet.PrivateSettersContractResolvers": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "MediatR": {
             "target": "Package",
             "version": "[8.1.0, )"
+          },
+          "Microsoft.Extensions.Caching.Abstractions": {
+            "target": "Package",
+            "version": "[3.1.7, )"
           },
           "Microsoft.Extensions.Options": {
             "target": "Package",
@@ -4964,6 +5069,10 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.11.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
           }
         },
         "imports": [

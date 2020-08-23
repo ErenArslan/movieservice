@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "XQXBzUPsqoSFcx9FwQF8pZgbZaREkGvF46KAJsQ+Oe+C0IFDinQ2YJ/UVcPfqCeO3eAyUoIbynaWc4iM6Iy26w==",
+  "dgSpecHash": "YIb3yBAY9M+qmPR6kQ+sc9P0iMbNNvYgPHKSO0rzNw+UeXq/XqYKF4wIAxrMhVEdENyiopgrooC4ZFAx9cTnAg==",
   "success": true,
   "projectFilePath": "C:\\Users\\SingleLanguage\\source\\repos\\AtrosMovie\\MovieService\\MovieService.Domain\\MovieService.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\SingleLanguage\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512"
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

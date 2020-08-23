@@ -4,7 +4,9 @@ using System.Collections.Generic;
 
 namespace MovieService.Domain.SeedWork
 {
+    [Serializable]
     public abstract class Entity : Entity<int> { }
+    [Serializable]
     public abstract class Entity<T>
     {
         T _Id;

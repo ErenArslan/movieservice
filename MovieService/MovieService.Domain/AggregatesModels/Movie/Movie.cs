@@ -1,6 +1,7 @@
 ﻿using MovieService.Domain.Events;
 using MovieService.Domain.Exceptions;
 using MovieService.Domain.SeedWork;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,9 +13,9 @@ namespace MovieService.Domain.AggregatesModels.Movie
     public class Movie : Entity, IAggregateRoot
     {
 
-        public double Popularity { get;private set; }
+        public double? Popularity { get;private set; }
         public string PosterPath { get;private set; }
-        public bool IsAdult { get;private set; }
+        public bool? IsAdult { get;private set; }
         public string BackdropPath { get;private set; }
         public string OriginalLanguage { get;private set; }
         public string OriginalTitle { get; private set; }
@@ -22,25 +23,39 @@ namespace MovieService.Domain.AggregatesModels.Movie
         public string Overview { get; private set; }
         public DateTime ReleaseDate { get; private set; }
 
-        private readonly Collection<Review> _reviews;
-        public IReadOnlyCollection<Review> Reviews => _reviews;
-        public double VoteAverage => _reviews.Where(p => p.Rating > 0).Average(p => p.Rating);
+        
+        private   Collection<Review> _reviews;
+        [JsonProperty("Reviews")]
+        public virtual IReadOnlyCollection<Review> Reviews
+        {
+            get { return _reviews.ToArray(); }
+        }
+        public double VoteAverage => GetAverageVote();
 
-        public Movie(int id, [NotNull]string title, [NotNull]string overview, [NotNull]DateTime releaseDate) 
+
+        private double GetAverageVote()
+        {
+            if (_reviews!=null &&  _reviews.Any(p => p.Rating > 0))
+            {
+              return  _reviews.Where(p => p.Rating > 0).Average(p => p.Rating);
+            }
+
+            return 0;
+        }
+
+        public Movie(int id, [NotNull]string title, [NotNull]DateTime releaseDate) 
         {
             if (id <= 0) throw new MovieServiceDomainException("Id can not be negative or zero");
             Id = id;
-
-
             Title = Check.NotNullOrWhiteSpace(value:title,nameof(title));
-            Overview = Check.NotNullOrWhiteSpace(value:overview,nameof(overview));
             ReleaseDate = Check.NotNull<DateTime>(value: releaseDate, nameof(releaseDate));
-
             _reviews = new Collection<Review>();
 
             AddDomainEvent(new MovieCreatedDomainEvent(this));
         }
-        private Movie() { }
+        private Movie() {
+            _reviews = new Collection<Review>();
+        }
       
 
         public void SetPopularity(double popularity)
@@ -73,9 +88,9 @@ namespace MovieService.Domain.AggregatesModels.Movie
         {
             Title = Check.NotNullOrWhiteSpace(value: title, nameof(title));
         }
-        public void SetOverview([NotNull]string overview)
+        public void SetOverview(string overview)
         {
-            Overview = Check.NotNullOrWhiteSpace(value: overview, nameof(overview));
+            Overview = overview;
         }
         public void SetReleaseDate([NotNull]DateTime releaseDate)
         {
@@ -84,12 +99,15 @@ namespace MovieService.Domain.AggregatesModels.Movie
 
         public Review AddReview([NotNull]Review review)
         {
+            _reviews = _reviews ?? new Collection<Review>();
             review = Check.NotNull<Review>(review, nameof(review));
 
+            //not check for userId. We can add a lot of review to try for sample
             var isExist = _reviews.Any(p => p.Id == review.Id);
             if (!isExist)
             {
                 _reviews.Add(review);
+                AddDomainEvent(new MovieReviewsUpdatedDomainEvent(this));
                 return review;
             }
             else
@@ -106,6 +124,7 @@ namespace MovieService.Domain.AggregatesModels.Movie
             if (isExist)
             {
                 _reviews.Remove(review);
+                AddDomainEvent(new MovieReviewsUpdatedDomainEvent(this));
                 return review;
             }
             else
@@ -122,6 +141,7 @@ namespace MovieService.Domain.AggregatesModels.Movie
             if (updateTo != null)
             {
                 updateTo = review;
+                AddDomainEvent(new MovieReviewsUpdatedDomainEvent(this));
                 return review;
             }
             else

@@ -25,23 +25,23 @@ namespace MovieService.Application.UseCases
 
             try
             {
-                var movie = new Movie(request.Id, request.Title, request.Overview, request.ReleaseDate);
+                var movie = new Movie(request.Id, request.Title,  request.ReleaseDate);
                 movie.SetBackDropPath(request.BackdropPath);
                 movie.SetIsAdult(request.IsAdult);
                 movie.SetOrginalLanguage(request.OriginalLanguage);
                 movie.SetOriginalTitle(request.OriginalTitle);
                 movie.SetPosterPath(request.PosterPath);
                 movie.SetPopularity(request.Popularity);
-
+                movie.SetOverview(request.Overview);
                 await _movieRepository.AddMovie(movie);
-              
 
                 response.Data = true;
             }
             catch (Exception ex)
+            
             {
                 response.Errors.Add(ex.Message);
-                _logger.LogError("--- Adding Movie Error","Movie Id:"+request.Id);
+                _logger.LogError("--- Adding Movie Error","Movie Id:"+request.Id,"Message: "+ex.Message);
 
             }
             return response;

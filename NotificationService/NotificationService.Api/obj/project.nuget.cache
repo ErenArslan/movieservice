@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "+JZJ+GsVZGjO10AEMnOPA693I4XGL/41gH6PeDv591HdsL8/VmqcPOJa/7ngGEgZuBkcppVXpydvS7rmwHMBnw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SingleLanguage\\source\\repos\\AtrosMovie\\NotificationService\\NotificationService.Api\\NotificationService.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\dotnetcore.cap\\3.1.0\\dotnetcore.cap.3.1.0.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\dotnetcore.cap.inmemorystorage\\3.1.0\\dotnetcore.cap.inmemorystorage.3.1.0.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\dotnetcore.cap.rabbitmq\\3.1.0\\dotnetcore.cap.rabbitmq.3.1.0.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.7\\microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.7\\microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.7\\microsoft.extensions.fileproviders.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\3.1.7\\microsoft.extensions.hosting.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.7\\microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.options\\3.1.7\\microsoft.extensions.options.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.7\\microsoft.extensions.primitives.3.1.7.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\rabbitmq.client\\6.1.0\\rabbitmq.client.6.1.0.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

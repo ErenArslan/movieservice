@@ -37,6 +37,32 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "DotNetCore.CAP": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "DotNetCore.CAP.InMemoryStorage": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "DotNetCore.CAP.RabbitMQ": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

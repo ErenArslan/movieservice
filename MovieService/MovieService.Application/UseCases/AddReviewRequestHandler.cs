@@ -36,14 +36,13 @@ namespace MovieService.Application.UseCases
                 var review = new Review(_guidGenerator.Create(), request.UserId, request.Note, request.Rating);
                 movie.AddReview(review);
 
-                await _movieRepository.AddMovie(movie);
-
+                await  _movieRepository.UpdateMovie(movie);
                 response.Data = true;
             }
             catch (Exception ex)
             {
                 response.Errors.Add(ex.Message);
-                _logger.LogError("--- Adding Review Error", "User Id:" + request.UserId);
+                _logger.LogError("--- Adding Review Error", "User Id:" + request.UserId, "Message: " + ex.Message);
 
 
             }

@@ -5,20 +5,24 @@ using System.Threading.Tasks;
 
 namespace MovieService.Infrastructure.Extensions
 {
-    static class MediatorExtension
+    public static class MediatorExtension
     {
         public static async Task DispatchDomainEventsAsync(this IMediator mediator, Entity entity)
         {
-            if (entity.DomainEvents==null || !entity.DomainEvents.Any())
+            if (entity.DomainEvents == null || !entity.DomainEvents.Any())
             {
                 return;
             }
 
-            foreach (var domainEvent in entity.DomainEvents)
+            var domainEvents = entity.DomainEvents.ToList();
+
+            entity.ClearDomainEvents();
+
+            foreach (var domainEvent in domainEvents)
                 await mediator.Publish(domainEvent);
 
 
-            entity.ClearDomainEvents();
+
         }
     }
 }

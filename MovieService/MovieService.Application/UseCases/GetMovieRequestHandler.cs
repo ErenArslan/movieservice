@@ -5,8 +5,6 @@ using Microsoft.Extensions.Logging;
 using MovieService.Application.Dtos.Requests;
 using MovieService.Application.Dtos.Responses;
 using MovieService.Domain.AggregatesModels.Movie;
-using MovieService.Domain.Exceptions;
-using Newtonsoft.Json;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -31,36 +29,27 @@ namespace MovieService.Application.UseCases
 
             try
             {
-                Movie movie = null;
-                var movieCache = await _distributedCache.GetStringAsync(request.Id.ToString());
 
-                if (movieCache == null)
+
+                var movie = await _movieRepository.Get(request.Id);
+
+                if (movie != null)
                 {
-                    movie = await _movieRepository.Get(request.Id);
-                    if (movie!=null)
-                    {
-                        await _distributedCache.SetStringAsync(movie.Id.ToString(), JsonConvert.SerializeObject(movie));
-                    }
-                    else
-                    {
-                        throw new MovieServiceDomainException("Movie not found.");
-                    }
-                }
-                else
-                {
-                    movie = JsonConvert.DeserializeObject<Movie>(movieCache);
+                    response.Data = movie.Adapt<MovieDto>();
+                    return response;
                 }
 
-                response.Data = movie.Adapt<MovieDto>();
+
 
             }
             catch (Exception ex)
             {
                 response.Errors.Add(ex.Message);
-                _logger.LogError("--- Getting Movie Error", "Movie Id:" + request.Id);
+                _logger.LogError("--- Getting Movie Error", "Movie Id:" + request.Id, "Message: " + ex.Message);
 
 
             }
+            response.Errors.Add("Movie Not Found");
             return response;
         }
     }

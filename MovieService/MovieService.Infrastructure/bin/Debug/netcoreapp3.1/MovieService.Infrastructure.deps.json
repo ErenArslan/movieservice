@@ -8,10 +8,13 @@
     ".NETCoreApp,Version=v3.1": {
       "MovieService.Infrastructure/1.0.0": {
         "dependencies": {
+          "JsonNet.PrivateSettersContractResolvers": "1.0.0",
           "MediatR": "8.1.0",
+          "Microsoft.Extensions.Caching.Abstractions": "3.1.7",
           "Microsoft.Extensions.Options": "3.1.7",
           "MongoDB.Driver": "2.11.0",
-          "MovieService.Domain": "1.0.0"
+          "MovieService.Domain": "1.0.0",
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "MovieService.Infrastructure.dll": {}
@@ -25,11 +28,33 @@
           }
         }
       },
+      "JsonNet.PrivateSettersContractResolvers/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/JsonNet.PrivateSettersContractResolvers.dll": {
+            "assemblyVersion": "1.0.0.2",
+            "fileVersion": "1.0.0.2"
+          }
+        }
+      },
       "MediatR/8.1.0": {
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.1.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/3.1.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.1.7"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll": {
+            "assemblyVersion": "3.1.7.0",
+            "fileVersion": "3.100.720.37108"
           }
         }
       },
@@ -180,6 +205,14 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -803,7 +836,8 @@
       },
       "MovieService.Domain/1.0.0": {
         "dependencies": {
-          "MediatR": "8.1.0"
+          "MediatR": "8.1.0",
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "MovieService.Domain.dll": {}
@@ -824,12 +858,26 @@
       "path": "dnsclient/1.3.1",
       "hashPath": "dnsclient.1.3.1.nupkg.sha512"
     },
+    "JsonNet.PrivateSettersContractResolvers/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B9KNPVez9v/qWHxNjCMcMVMcstQMM/KLrXop9NPa9tzrU9hSasPNFaSETofo5GrLKQ1NHzDHcHR9Be4FPcfeNg==",
+      "path": "jsonnet.privatesetterscontractresolvers/1.0.0",
+      "hashPath": "jsonnet.privatesetterscontractresolvers.1.0.0.nupkg.sha512"
+    },
     "MediatR/8.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-KJFnA0MV83bNOhvYbjIX1iDykhwFXoQu0KV7E1SVbNA/CmO2I7SAm2Baly0eS7VJ2GwlmStLajBfeiNgTpvYzQ==",
       "path": "mediatr/8.1.0",
       "hashPath": "mediatr.8.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Abstractions/3.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uj/0fmq7FWi7B7RfLkn2UJE1SThJ60mOlChx9P5nRjP/EbeYNm+LoyiOr6yPhDsArwHttKyun18TXXJ2C9EE/g==",
+      "path": "microsoft.extensions.caching.abstractions/3.1.7",
+      "hashPath": "microsoft.extensions.caching.abstractions.3.1.7.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.7": {
       "type": "package",
@@ -907,6 +955,13 @@
       "sha512": "sha512-WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

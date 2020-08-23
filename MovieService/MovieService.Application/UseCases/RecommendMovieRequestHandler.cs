@@ -38,7 +38,7 @@ namespace MovieService.Application.UseCases
             catch (Exception ex)
             {
                 response.Errors.Add(ex.Message);
-                _logger.LogError("--- Publising Recomended Movie Error", "Movie Id:" + request.MovieId);
+                _logger.LogError("--- Publising Recomended Movie Error", "Movie Id:" + request.MovieId, "Message: " + ex.Message);
 
             }
             return response;

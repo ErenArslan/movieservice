@@ -5,6 +5,7 @@ namespace MovieService.Application.Dtos.Responses
 {
     public  class MovieDto
     {
+        public int Id { get; set; }
         public double Popularity { get;  set; }
         public string PosterPath { get;  set; }
         public bool IsAdult { get;  set; }
@@ -16,6 +17,6 @@ namespace MovieService.Application.Dtos.Responses
         public DateTime ReleaseDate { get;  set; }
         public double VoteAverage { get; set; }
 
-        public Collection<ReviewDto> Reviews;
+        public Collection<ReviewDto> Reviews { get; set; }
     }
 }

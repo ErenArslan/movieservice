@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YZu1JGnM3UXS2gYo5xpXje2zyodz8iJk3gqdAxL9PFIvYxHz2AkHuL4H6DOPt5guzLY5IX8XdpkJDM6ZNi16Qw==",
+  "dgSpecHash": "AwlijYoIhF2O4wvFF6uEYHzGKD1SNChxvggu4igNo76vHePMow9OtwvC5FtWAY+P868z8HYrslCwVEd3k0dOMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\SingleLanguage\\source\\repos\\AtrosMovie\\MovieService\\MovieService.Api\\MovieService.Api.csproj",
   "expectedPackageFiles": [
@@ -18,6 +18,7 @@
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\fluentvalidation\\9.1.3\\fluentvalidation.9.1.3.nupkg.sha512",
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.1.3\\fluentvalidation.aspnetcore.9.1.3.nupkg.sha512",
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.1.3\\fluentvalidation.dependencyinjectionextensions.9.1.3.nupkg.sha512",
+    "C:\\Users\\SingleLanguage\\.nuget\\packages\\jsonnet.privatesetterscontractresolvers\\1.0.0\\jsonnet.privatesetterscontractresolvers.1.0.0.nupkg.sha512",
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\mapster\\6.5.0\\mapster.6.5.0.nupkg.sha512",
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
     "C:\\Users\\SingleLanguage\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.1.0\\mediatr.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

@@ -8,9 +8,8 @@ namespace MovieService.Domain.AggregatesModels.Movie
     {
         Task<List<Movie>> GetList(int page=1,int offset=15);
         Task<Movie> Get(int id);
-        Task<Movie> AddMovie(Movie movie);
-        Task<Movie> Updateovie(Movie movie);
-        Task RemoveMovie(Movie movie);
+        Task AddMovie(Movie movie);
+        Task UpdateMovie(Movie movie);
 
     }
 }

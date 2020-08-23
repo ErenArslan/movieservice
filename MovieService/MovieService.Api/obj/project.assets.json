@@ -188,6 +188,18 @@
           "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
+      "JsonNet.PrivateSettersContractResolvers/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/JsonNet.PrivateSettersContractResolvers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/JsonNet.PrivateSettersContractResolvers.dll": {}
+        }
+      },
       "Mapster/6.5.0": {
         "type": "package",
         "dependencies": {
@@ -2650,7 +2662,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "MediatR": "8.1.0"
+          "MediatR": "8.1.0",
+          "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
           "bin/placeholder/MovieService.Domain.dll": {}
@@ -2663,10 +2676,13 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "JsonNet.PrivateSettersContractResolvers": "1.0.0",
           "MediatR": "8.1.0",
+          "Microsoft.Extensions.Caching.Abstractions": "3.1.7",
           "Microsoft.Extensions.Options": "3.1.7",
           "MongoDB.Driver": "2.11.0",
-          "MovieService.Domain": "1.0.0"
+          "MovieService.Domain": "1.0.0",
+          "Newtonsoft.Json": "12.0.3"
         },
         "compile": {
           "bin/placeholder/MovieService.Infrastructure.dll": {}
@@ -2877,6 +2893,19 @@
         "fluentvalidation.dependencyinjectionextensions.nuspec",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "JsonNet.PrivateSettersContractResolvers/1.0.0": {
+      "sha512": "B9KNPVez9v/qWHxNjCMcMVMcstQMM/KLrXop9NPa9tzrU9hSasPNFaSETofo5GrLKQ1NHzDHcHR9Be4FPcfeNg==",
+      "type": "package",
+      "path": "jsonnet.privatesetterscontractresolvers/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jsonnet.privatesetterscontractresolvers.1.0.0.nupkg.sha512",
+        "jsonnet.privatesetterscontractresolvers.nuspec",
+        "lib/netstandard1.3/JsonNet.PrivateSettersContractResolvers.dll",
+        "lib/netstandard2.0/JsonNet.PrivateSettersContractResolvers.dll"
       ]
     },
     "Mapster/6.5.0": {
