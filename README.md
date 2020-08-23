@@ -1,6 +1,12 @@
 # MovieService
 DDD, Clean Architecture, Microservices
 
+## Technology Sets
+Cache = Redis
+Log = ELK (Elasticsearch)
+Database = Mongodb
+MQ = RabbitMQ
+
 ## Installation
 
 just need docker to use
