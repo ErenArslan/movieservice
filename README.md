@@ -2,10 +2,13 @@
 DDD, Clean Architecture, Microservices
 
 ## Technology Sets
-Cache = Redis
-Log = ELK (Elasticsearch)
-Database = Mongodb
-MQ = RabbitMQ
+Cache = Redis |
+Log = ELK (Elasticsearch) |
+Database = Mongodb | 
+MQ = RabbitMQ | 
+
+## Healtch Checks
+Healt Checks Added  localhost:8000/hc
 
 ## Installation
 
