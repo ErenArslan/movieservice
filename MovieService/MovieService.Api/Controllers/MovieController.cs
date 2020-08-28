@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MovieService.Api.Controllers
 {
-    [Authorize]
+  
     [ApiController]
     [Route("[controller]")]
     public class MovieController : ControllerBase
